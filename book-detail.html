@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мертвые души - Подробнее</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="book-detail.css"> <!-- Подключаем новый CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">Книжный Червь</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li><a href="index.html#genres" class="nav-link">Жанры</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="site-search" placeholder="Поиск">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="auth-button-container">
+                <button id="login-button" class="btn btn-primary">Войти</button>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-button"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="book-detail-section animated-section">
+            <div class="container book-detail-content">
+                <div class="book-image-container">
+                    <!-- Замените 'photo/dead-souls-cover.jpg' на реальный путь к изображению -->
+                    <img src="photo/мертвые_души.jpg" alt="Обложка книги Мертвые души">
+                </div>
+                <div class="book-info-details">
+                    <h1>Мертвые души</h1>
+                    <div class="book-author">Николай Гоголь</div>
+                    <div class="book-meta">
+                        <div class="book-meta-item">
+                            <i class="fas fa-star"></i>
+                            <span class="meta-label">Рейтинг:</span> 4.5/5 (1200+ оценок)
+                        </div>
+                        <div class="book-meta-item">
+                            <i class="fas fa-book-open"></i>
+                            <span class="meta-label">Жанр:</span> Сатира, Поэма в прозе
+                        </div>
+                        <div class="book-meta-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span class="meta-label">Год издания:</span> 1842
+                        </div>
+                        <div class="book-meta-item">
+                            <i class="fas fa-language"></i>
+                            <span class="meta-label">Язык:</span> Русский
+                        </div>
+                    </div>
+                    <div class="book-description">
+                        <h2>Описание</h2>
+                        <p>
+                            "Мертвые души" — одно из самых известных произведений Николая Васильевича Гоголя, сатирическая поэма в прозе, обличающая нравы помещичьей России. Главный герой, Павел Иванович Чичиков, путешествует по российской глубинке, скупая "мертвые души" — крестьян, умерших после последней переписи, но числящихся живыми.
+                        </p>
+                        <p>
+                            Встречи Чичикова с разнообразными помещиками — от милого и добродушного Манилова до мрачного и скопидомного Плюшкина — рисуют галерею ярких, но в то же время трагических образов. Через ироничное описание быта и характеров Гоголь создает глубокую картину русского общества, его пороков и абсурдности. Несмотря на кажущуюся легкость повествования, произведение поднимает серьезные вопросы о смысле жизни, духовной деградации и истинной человечности.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Кнопка "Читать" вынесена за пределы book-info-details -->
+            <div class="book-action-container">
+                <a href="reading-page.html" class="btn btn-primary btn-read">Читать книгу</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">Книжный Червь</div>
+                <ul class="footer-links-list">
+                    <li><a href="index.html#home">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="index.html#genres">Жанры</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Связаться с нами</h3>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139397071">+7 (913) 939-7071</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139395510">+7 (913) 939-5510</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139396699">+7 (913) 939-6699</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:ansindikat@gmail.com">ansindikat@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:bookwarm@gmail.com">bookwarm@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2025 Книжный Червь. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

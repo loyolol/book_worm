@@ -1,0 +1,175 @@
+/* --- Стили для страницы чтения книги --- */
+
+.reading-page-section {
+    padding: 80px 0;
+    background-color: var(--background-page);
+}
+
+.reading-content {
+    max-width: 900px; /* Ограничиваем ширину контента для лучшей читаемости */
+    margin: 0 auto;
+    padding: 0 20px; /* Отступы по бокам */
+    font-family: 'Georgia', serif; /* Более подходящий шрифт для чтения */
+    line-height: 1.9; /* Увеличиваем межстрочный интервал */
+    color: var(--text-color); /* Установлен обычный цвет текста */
+    background-color: var(--background-light);
+    padding: 40px 60px; /* Внутренние отступы */
+    border-radius: var(--border-radius-large);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.reading-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-family: var(--font-primary); /* Шрифт для заголовков */
+}
+
+.reading-content .book-author {
+    font-size: 24px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-family: var(--font-secondary);
+}
+
+.reading-content p {
+    font-size: 18px;
+    color: var(--text-color); /* Обычный цвет текста */
+    margin-bottom: 25px;
+    text-align: justify; /* Выравнивание текста по ширине */
+}
+
+/* Убираем синий цвет у ссылок внутри текста, чтобы они не выделялись */
+.reading-content p a {
+    color: inherit; /* Наследует цвет от родительского элемента */
+    text-decoration: underline; /* Оставляем подчеркивание */
+    transition: color 0.3s ease;
+}
+
+.reading-content p a:hover {
+    color: var(--primary-color); /* При наведении синий цвет */
+}
+
+
+.reading-content .chapter-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    text-align: center;
+}
+
+/* --- Стили для переключения глав --- */
+.chapter-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.chapter-nav-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius-medium);
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.chapter-nav-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.chapter-nav-button.disabled {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- Медиа-запросы для страницы чтения --- */
+@media (max-width: 992px) {
+    .reading-content {
+        padding: 30px 40px;
+    }
+    .reading-content h1 {
+        font-size: 40px;
+    }
+    .reading-content .book-author {
+        font-size: 22px;
+    }
+    .reading-content p {
+        font-size: 17px;
+    }
+    .reading-content .chapter-title {
+        font-size: 28px;
+    }
+    .chapter-navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .chapter-nav-button {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .reading-content {
+        padding: 20px 30px;
+    }
+    .reading-content h1 {
+        font-size: 36px;
+    }
+    .reading-content .book-author {
+        font-size: 20px;
+    }
+    .reading-content p {
+        font-size: 16px;
+    }
+    .reading-content .chapter-title {
+        font-size: 26px;
+    }
+    .chapter-nav-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .reading-content {
+        padding: 15px 20px;
+    }
+    .reading-content h1 {
+        font-size: 32px;
+    }
+    .reading-content .book-author {
+        font-size: 18px;
+    }
+    .reading-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+    .reading-content .chapter-title {
+        font-size: 24px;
+    }
+    .chapter-navigation {
+        gap: 15px;
+    }
+    .chapter-nav-button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}

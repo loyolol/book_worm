@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Книжный Червь</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">Книжный Червь</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li><a href="index.html#genres" class="nav-link">Жанры</a></li>
+                    <li><a href="about.html#about" class="nav-link active">О нас</a></li>
+                    <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="site-search" placeholder="Поиск">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="auth-button-container">
+                <button id="login-button" class="btn btn-primary">Войти</button>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-button"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about-page-section animated-section">
+            <div class="container">
+                <h1 class="page-title">О нас</h1>
+                <div class="about-page-content">
+                    <div class="about-page-image">
+                        <img src="photo/книжный мир.jpg" alt="Наша команда читает">
+                    </div>
+                    <div class="about-page-text">
+                        <p>«Книжный Червь» — это не просто онлайн-библиотека, это портал в мир безграничных знаний и захватывающих историй. Мы — команда увлеченных библиофилов, стремящихся сделать чтение доступным, удобным и приятным для каждого.</p>
+                        <p>Наша миссия — помочь вам открыть новые горизонты, познакомиться с классическими шедеврами и современными бестселлерами, найти вдохновение и расширить свой кругозор. Мы верим, что каждая книга — это возможность стать лучше, узнать что-то новое и почувствовать мир по-иному.</p>
+                        <p>С момента основания в 2025 году, мы неустанно работаем над созданием самого дружелюбного и функционального пространства для читателей. Мы постоянно пополняем нашу библиотеку, чтобы вы всегда могли найти что-то новое и интересное.</p>
+                        
+                        <div class="about-page-features">
+                            <div class="feature-item">
+                                <i class="fas fa-headset feature-icon"></i>
+                                <div>
+                                    <h3>Поддержка Пользователей</h3>
+                                    <p>Наша служба поддержки всегда готова помочь вам с любыми вопросами.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <i class="fas fa-users feature-icon"></i>
+                                <div>
+                                    <h3>Сообщество Читателей</h3>
+                                    <p>Делитесь впечатлениями, обсуждайте книги и находите единомышленников.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-medal feature-icon"></i>
+                                <div>
+                                    <h3>Качество и Удобство</h3>
+                                    <p>Мы гарантируем высокое качество текстов и удобный интерфейс.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-book-open feature-icon"></i>
+                                <div>
+                                    <h3>Обширная Библиотека</h3>
+                                    <p>Тысячи книг разных жанров и эпох, от классики до новинок.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- === Новый блок Call to Action, вынесенный и центрированный === -->
+                <div class="centered-call-to-action-container">
+                    <div class="centered-call-to-action">
+                        <p>Готовы начать свое литературное приключение?</p>
+                        <a href="index.html#catalog" class="btn btn-primary">Перейти в каталог</a>
+                    </div>
+                </div>
+                <!-- === Конец блока Call to Action === -->
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">Книжный Червь</div>
+                <ul class="footer-links-list">
+                    <li><a href="index.html#home">Главная</a></li>
+                    <li><a href="index.html#catalog">Каталог</a></li>
+                    <li><a href="index.html#genres">Жанры</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Связаться с нами</h3>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139397071">+7 (913) 939-7071</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139395510">+7 (913) 939-5510</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139396699">+7 (913) 939-6699</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:ansindikat@gmail.com">ansindikat@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:bookwarm@gmail.com">bookwarm@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2025 Книжный Червь. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

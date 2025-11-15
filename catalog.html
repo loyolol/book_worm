@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Книжный Червь</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">Книжный Червь</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link active">Каталог</a></li> <!-- Активный пункт для каталога -->
+                    <li><a href="index.html#genres" class="nav-link">Жанры</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="site-search" placeholder="Поиск">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="auth-button-container">
+                <button id="login-button" class="btn btn-primary">Войти</button>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-button"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog-page-section animated-section">
+            <div class="container">
+                <h1 class="page-title">Наш каталог</h1>
+
+                <div class="catalog-filters">
+                    <div class="filter-group">
+                        <label for="genre-select">Жанр:</label>
+                        <select id="genre-select" name="genre">
+                            <option value="all">Все жанры</option>
+                            <option value="fantasy">Фэнтези</option>
+                            <option value="detective">Детектив</option>
+                            <option value="science-fiction">Научная фантастика</option>
+                            <option value="novel">Роман</option>
+                            <option value="thriller">Триллер</option>
+                            <option value="historical">Исторический</option>
+                            <option value="biography">Биография</option>
+                            <option value="adventure">Приключения</option>
+                            <option value="poetry">Поэзия</option>
+                            <option value="drama">Драма</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="author-input">Автор:</label>
+                        <input type="text" id="author-input" placeholder="Введите имя автора">
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-select">Сортировка:</label>
+                        <select id="sort-select" name="sort">
+                            <option value="title-asc">По названию (А-Я)</option>
+                            <option value="title-desc">По названию (Я-А)</option>
+                            <option value="author-asc">По автору (А-Я)</option>
+                            <option value="author-desc">По автору (Я-А)</option>
+                            <option value="year-asc">По году (возр.)</option>
+                            <option value="year-desc">По году (убыв.)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="catalog-books-grid">
+                    <!-- Пример книги -->
+                        <div class="book-card">
+                            <img src="photo/мертвые_души.jpg" alt="Обложка книги">
+                            <div class="book-info">
+                                <h3>Мертвые души</h3>
+                                <p>Николай Гоголь</p>
+                                <div class="rating">★★★★☆</div>
+                                <a href="book-detail.html" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                        </div>
+                    <div class="book-card" data-genre="adventure">
+                        <img src="photo/горе от ума.jpg" alt="11">
+                        <div class="book-info">
+                            <h3>Горе от ума</h3>
+                            <p>Александр Грибоедов</p>
+                            <div class="rating">★★★★☆</div>
+                            <a href="#" class="btn btn-secondary">Подробнее</a>
+                        </div>
+                    </div>
+                        <div class="book-card">
+                            <img src="photo/Война и мир.jpg" alt="Обложка книги">
+                            <div class="book-info">
+                                <h3>Война и мир</h3>
+                                <p>Лев Толстой</p>
+                                <div class="rating">★★★★☆</div>
+                                <a href="#book-details" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="book-card">
+                            <img src="photo/Отцы и дети.jpg" alt="Обложка книги">
+                            <div class="book-info">
+                                <h3>Отцы и дети</h3>
+                                <p>Иван Тургенев</p>
+                                <div class="rating">★★★★☆</div>
+                                <a href="#book-details" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="book-card">
+                            <img src="photo/Мастер и маргарита.jpg" alt="Обложка книги">
+                            <div class="book-info">
+                                <h3>Мастер и Маргарита</h3>
+                                <p>Михаил Булгаков</p>
+                                <div class="rating">★★★★★</div>
+                                <a href="#book-details" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="book-card">
+                            <img src="photo/Евгений Онегин.jpg" alt="Обложка книги">
+                            <div class="book-info">
+                                <h3>Евгений Онегин</h3>
+                                <p>Александр Пушкин</p>
+                                <div class="rating">★★★★☆</div>
+                                <a href="#book-details" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="book-card">
+                            <img src="photo/Судьба человека.jpg" alt="Обложка книги">
+                            <div class="book-info">
+                                <h3>Судьба человека</h3>
+                                <p>Михаил Лермонтов</p>
+                                <div class="rating">★★★★☆</div>
+                                <a href="#book-details" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="book-card">
+                            <img src="photo/Вишневый сад.jpg" alt="Обложка книги">
+                            <div class="book-info">
+                                <h3>Вишневый сад</h3>
+                                <p>Антон Чехов</p>
+                                <div class="rating">★★★★☆</div>
+                                <a href="#book-details" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="book-card">
+                            <img src="photo/Идиот.jpg" alt="Обложка книги">
+                            <div class="book-info">
+                                <h3>Идиот</h3>
+                                <p>Федор достоевский</p>
+                                <div class="rating">★★★★☆</div>
+                                <a href="#book-details" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                        </div>
+                    <div class="book-card" data-genre="thriller">
+                        <img src="photo/повелитель тайн.jpg" alt="Название книги 9">
+                        <div class="book-info">
+                            <h3>Повелитель тайн</h3>
+                            <p>Е Юань</p>
+                            <div class="rating">★★★★☆</div>
+                            <a href="#" class="btn btn-secondary">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-genre="poetry">
+                        <img src="photo/Алые паруса.jpg" alt="Книга 10">
+                        <div class="book-info">
+                            <h3>Алые паруса</h3>
+                            <p>Александр Грин</p>
+                            <div class="rating">★★★★☆</div>
+                            <a href="#" class="btn btn-secondary">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                            <img src="photo/Гарри поттер.jpg" alt="Обложка книги">
+                            <div class="book-info">
+                                <h3>Гарри Поттер</h3>
+                                <p>Джуан Роулинг</p>
+                                <div class="rating">★★★★★</div>
+                                <a href="#book-details" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="prev-page"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#">1</a>
+                    <a href="#" class="current-page">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <span>...</span>
+                    <a href="#">7</a>
+                    <a href="#" class="next-page"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">Книжный Червь</div>
+                <ul class="footer-links-list">
+                    <li><a href="index.html#home">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="index.html#genres">Жанры</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Связаться с нами</h3>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139397071">+7 (913) 939-7071</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139395510">+7 (913) 939-5510</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139396699">+7 (913) 939-6699</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:ansindikat@gmail.com">ansindikat@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:bookwarm@gmail.com">bookwarm@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2025 Книжный Червь. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

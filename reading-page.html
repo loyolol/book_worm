@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чтение: Мертвые души</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Georgia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reading-page.css"> <!-- Подключаем стили для страницы чтения -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">Книжный Червь</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li><a href="index.html#genres" class="nav-link">Жанры</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="site-search" placeholder="Поиск">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="auth-button-container">
+                <button id="login-button" class="btn btn-primary">Войти</button>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-button"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="reading-page-section">
+            <div class="reading-content">
+                <h1>Мертвые души</h1>
+                <div class="book-author">Николай Гоголь</div>
+
+                <!-- Содержимое глав будет загружаться сюда с помощью JavaScript -->
+                <div id="chapter-content">
+                    <!-- Заголовок первой главы будет добавлен из JS -->
+                    <p>
+                        По дороге во всю прыть мчался беготни ямщик, сидевший на облучке; колокольчик однозвучно визжал и тянул подряд; ямщик то и дело утирал себе планкой потуги от страха; лицо его было бледно; он забирал и лишь на один момент воображал себя в совершенной растерянности.
+                    </p>
+                    <p>
+                        Внезапно в дальнем углу комнаты показались два светлых глаза, смотрящих на него с любопытством. Он искоса взглянул на них, улыбнулся и указал на них пальцем.
+                    </p>
+                    <p>
+                        «А вот и они!» — сказал он с улыбкой, подходя к ним. «Вы не ожидали нас увидеть, правда?»
+                    </p>
+                </div>
+
+                <div class="chapter-navigation">
+                    <button class="chapter-nav-button prev-chapter-button" disabled>Предыдущая глава</button>
+                    <button class="chapter-nav-button next-chapter-button">Следующая глава</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">Книжный Червь</div>
+                <ul class="footer-links-list">
+                    <li><a href="index.html#home">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="index.html#genres">Жанры</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Связаться с нами</h3>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139397071">+7 (913) 939-7071</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139395510">+7 (913) 939-5510</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139396699">+7 (913) 939-6699</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:ansindikat@gmail.com">ansindikat@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:bookwarm@gmail.com">bookwarm@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2025 Книжный Червь. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- Подключаем основной скрипт -->
+    <script>
+        // --- JavaScript для переключения глав ---
+        const chapterContentDiv = document.getElementById('chapter-content');
+        const prevChapterButton = document.querySelector('.prev-chapter-button');
+        const nextChapterButton = document.querySelector('.next-chapter-button');
+
+        const chapters = {
+            1: {
+                title: "Глава I",
+                content: `
+                    <p>
+                        По дороге во всю прыть мчался беготни ямщик, сидевший на облучке; колокольчик однозвучно визжал и тянул подряд; ямщик то и дело утирал себе планкой потуги от страха; лицо его было бледно; он забирал и лишь на один момент воображал себя в совершенной растерянности.
+                    </p>
+                    <p>
+                        Внезапно в дальнем углу комнаты показались два светлых глаза, смотрящих на него с любопытством. Он искоса взглянул на них, улыбнулся и указал на них пальцем.
+                    </p>
+                    <p>
+                        «А вот и они!» — сказал он с улыбкой, подходя к ним. «Вы не ожидали нас увидеть, правда?»
+                    </p>
+                `
+            },
+            2: {
+                title: "Глава II",
+                content: `
+                    <p>
+                        Чичиков по окончании этого разговора вышел на улицу. Солнце уже клонилось к закату, и длинные тени падали на землю. Он огляделся вокруг и увидел перед собой необыкновенное зрелище.
+                    </p>
+                    <p>
+                        В дали показалось нечто вроде огненного столпа, словно сам демон спустился на землю. Чичиков замер на месте, не в силах пошевельнуться.
+                    </p>
+                    <p>
+                        «Что это такое?» — прошептал он дрожащим голосом. «Неужели это то, о чем мне говорили?»
+                    </p>
+                `
+            },
+            3: {
+                title: "Глава III",
+                content: `
+                    <p>
+                        Ночь опустилась на город. Луна светила тускло, скрываясь за тяжелыми тучами. Чичиков вернулся в свою комнату и сел у окна. Он думал о том, что ему предстоит сделать, и чувствовал беспокойство.
+                    </p>
+                    <p>
+                        Его путь был нелегок, но он был решительно настроен на свой особый лад. Он знал, что ему придется столкнуться с множеством трудностей, но он был готов к этому.
+                    </p>
+                    <p>
+                        «Пусть будет что будет», — сказал он сам себе. «Главное — не потерять веру в себя».
+                    </p>
+                `
+            },
+            4: {
+                title: "Глава IV",
+                content: `
+                    <p>
+                        На следующий день Чичиков отправился в город. Он шел быстро, стараясь не привлекать к себе внимания. Его цель была проста — найти тех, кто мог бы помочь ему в этом необычном деле.
+                    </p>
+                    <p>
+                        Он зашел в небольшую трактирную лавку, где подавали кофе и пирожные. Там он встретил человека, который казался ему очень полезным.
+                    </p>
+                    <p>
+                        «Добрый день», — сказал Чичиков, протягивая руку. «Меня зовут Павел Иванович Чичиков. Я путешествую по делам».
+                    </p>
+                `
+            },
+            5: {
+                title: "Глава V",
+                content: `
+                    <p>
+                        Разговор продолжался довольно долго. Чичиков попытался выяснить все детали, связанные с его планом. Ему было важно знать, кто и как может помочь ему в этом необычном деле.
+                    </p>
+                    <p>
+                        Новый знакомый оказался довольно разговорчивым и рассказал ему много интересного о местных жителях и их привычках.
+                    </p>
+                    <p>
+                        «Вы найдете здесь много людей, которым можно продать что угодно», — сказал он с хитрой улыбкой.
+                    </p>
+                `
+            },
+            6: {
+                title: "Глава VI",
+                content: `
+                    <p>
+                        Помещик Манилов, человек добрый, но совершенно бесполезный, принял Чичикова радушно. Они долго беседовали о делах, не касаясь, впрочем, существа интересующего Чичикова вопроса. Маниловская гостиная была полна безделушек: одна из них, гипсовая собачка, понравилась Чичикову.
+                    </p>
+                    <p>
+                        «Примите, пожалуйста, это вам очень идет», — сказал Манилов, подавая ему собачку. Чичиков поблагодарил и принял подарок.
+                    </p>
+                `
+            },
+            7: {
+                title: "Глава VII",
+                content: `
+                    <p>
+                        Губернский город N. поразил Чичикова своим оживлением. Улицы были полны народа, повсюду слышались голоса и шум. Он направился к дому губернатора, где должно было состояться большое собрание.
+                    </p>
+                    <p>
+                        На балу у губернатора Чичикову предстояло встретить многих важных персон. Ему нужно было произвести благоприятное впечатление, чтобы достичь своих целей.
+                    </p>
+                `
+            },
+            8: {
+                title: "Глава VIII",
+                content: `
+                    <p>
+                        Чичиков, оказавшись в центре всеобщего внимания, чувствовал себя уверенно. Он умел располагать к себе людей и находить общий язык с кем угодно. Его обаяние и хитрость всегда играли ему на руку.
+                    </p>
+                    <p>
+                        Он вел беседы с помещиками, расспрашивал об их имениях и, конечно же, о числе крестьян, как живых, так и умерших. Каждый разговор был для него шагом к осуществлению его замысла.
+                    </p>
+                `
+            },
+            9: {
+                title: "Глава IX",
+                content: `
+                    <p>
+                        Помещица Коробочка, отличавшаяся крайней скупостью и подозрительностью, долго не хотела продавать свои души Чичикову. Она боялась, что ее обманут, и всячески старалась уклониться от сделки.
+                    </p>
+                    <p>
+                        «Да зачем вам мои души?» — спрашивала она, подозрительно косясь на Чичикова. «Может, вы для чего-нибудь другого их берете?»
+                    </p>
+                `
+            },
+            10: {
+                title: "Глава X",
+                content: `
+                    <p>
+                        Ноздрев, игрок и враль, встретил Чичикова с необычайным радушием. Он был готов продать что угодно, лишь бы получить деньги на очередной проигрыш. Его беззаботность и легкомыслие вызывали у Чичикова одновременно и раздражение, и чувство удовлетворения.
+                    </p>
+                    <p>
+                        «Души? А, души! Конечно, продам!» — весело крикнул Ноздрев. «У меня их хоть пруд пруди!»
+                    </p>
+                `
+            }
+        };
+
+        let currentChapter = 1; // Начинаем с первой главы
+
+        // Функция для отображения текущей главы
+        function displayChapter(chapterNumber) {
+            const chapterData = chapters[chapterNumber];
+            if (chapterData) {
+                // Вставляем заголовок главы и ее контент
+                chapterContentDiv.innerHTML = `<h2 class="chapter-title">${chapterData.title}</h2>${chapterData.content}`;
+                currentChapter = chapterNumber;
+                updateNavigationButtons();
+            }
+        }
+
+        // Функция для обновления состояния кнопок навигации
+        function updateNavigationButtons() {
+            prevChapterButton.disabled = currentChapter === 1;
+            nextChapterButton.disabled = currentChapter === Object.keys(chapters).length;
+
+            // Обновляем текст кнопок, если нужно
+            if (currentChapter === 1) {
+                prevChapterButton.textContent = "Предыдущая глава";
+            } else {
+                prevChapterButton.textContent = "Предыдущая глава";
+            }
+
+            if (currentChapter === Object.keys(chapters).length) {
+                nextChapterButton.textContent = "Следующая глава";
+            } else {
+                nextChapterButton.textContent = "Следующая глава";
+            }
+        }
+
+        // Обработчик клика по кнопке "Предыдущая глава"
+        prevChapterButton.addEventListener('click', () => {
+            if (currentChapter > 1) {
+                displayChapter(currentChapter - 1);
+            }
+        });
+
+        // Обработчик клика по кнопке "Следующая глава"
+        nextChapterButton.addEventListener('click', () => {
+            if (currentChapter < Object.keys(chapters).length) {
+                displayChapter(currentChapter + 1);
+            }
+        });
+
+        // Инициализация: отображаем первую главу при загрузке страницы
+        displayChapter(currentChapter);
+
+    </script>
+</body>
+</html>

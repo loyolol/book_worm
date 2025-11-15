@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Книжный Червь</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">Книжный Червь</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li><a href="index.html#genres" class="nav-link">Жанры</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="contacts.html#contact" class="nav-link active">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="site-search" placeholder="Поиск">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="auth-button-container">
+                <button id="login-button" class="btn btn-primary">Войти</button>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-button"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact" class="contact-page-section animated-section">
+            <div class="container">
+                <h1 class="page-title">Свяжитесь с нами</h1>
+                <div class="contact-page-content">
+                    <div class="contact-info-column">
+                        <h2>Найдите нас</h2>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt contact-icon"></i>
+                                <div>
+                                    <h3>Адрес</h3>
+                                    <p>Новосибирск, Сибиряков Гвардейцев, д.62, офис 332</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone contact-icon"></i>
+                                <div>
+                                    <h3>Телефон</h3>
+                                    <p><a href="tel:+79139397071">+7 (913) 939-7071</a></p>
+                                    <p><a href="tel:+79139395510">+7 (913) 939-5510</a></p>
+                                    <p><a href="tel:+79139396699">+7 (913) 939-6699</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope contact-icon"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:ansindikat@gmail.com">ansindikat@gmail.com</a></p>
+                                    <p><a href="mailto:bookwarm@gmail.com">bookwarm@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock contact-icon"></i>
+                                <div>
+                                    <h3>Время работы</h3>
+                                    <p>Пн-Пт: 10:00 - 20:00</p>
+                                    <p>Сб: 11:00 - 18:00</p>
+                                    <p>Вс: Выходной</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-social-media">
+                            <h3>Мы в соцсетях</h3>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-column">
+                        <h2>Напишите нам</h2>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                        </form>
+                    </div>
+                    <div class="contact-map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2117.858846988717!2d82.9065558732681!3d55.031278499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42efc5110b179743%3A0x780305f3c423c730!2z0KHQvtC70L3QtdC90LAg0KHQvtC70L3QtdC90LAg0LIuLCDQn9GA0L7QtdC80Y8g0Lcg0KHQvtC70L3QtdC90LAg0LIuLCDQn9GA0L7QtdC80Y8g0LIu IDYyLCDQn9GA0L7QtdC80Y8g0LIu IDYy!5e0!3m2!1sru!2sua!4v1718988549011!5m2!1sru!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">Книжный Червь</div>
+                <ul class="footer-links-list">
+                    <li><a href="index.html#home">Главная</a></li>
+                    <li><a href="index.html#catalog">Каталог</a></li>
+                    <li><a href="index.html#genres">Жанры</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Связаться с нами</h3>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139397071">+7 (913) 939-7071</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139395510">+7 (913) 939-5510</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79139396699">+7 (913) 939-6699</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:ansindikat@gmail.com">ansindikat@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:bookwarm@gmail.com">bookwarm@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2025 Книжный Червь. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
